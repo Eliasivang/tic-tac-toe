@@ -65,7 +65,6 @@ export default function Home() {
               </div>
               ))
               }
-
               
           </section>               
           
@@ -75,7 +74,7 @@ export default function Home() {
                     <p className="text-xl">
                         The <span className="text-green-500">winner</span> is {winner}
                     </p>
-                    <button>Nueva Partida</button>  
+                    <button>New Game</button>  
                 </div>
           }
         </main>
