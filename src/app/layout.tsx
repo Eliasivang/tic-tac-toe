@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import {Quicksand } from 'next/font/google'
+import { Coiny} from 'next/font/google'
 
-const font = Quicksand({ subsets: ['latin'], weight:["400"] })
+const font = Coiny({ subsets: ['latin'], weight:["400"] })
 
 export const metadata: Metadata = {
   title: 'TA-TE-TI',
