@@ -68,23 +68,23 @@ export default function Home() {
   
     <main className="w-full">  
     <div className= "flex flex-col items-center justify-center w-full my-10">
-      <h1 className="text-5xl font-bold text-blue-500 md:text-7xl">TIC TAC TOE</h1>
+      <h1 className="text-4xl font-bold text-blue-500 md:text-7xl">TIC TAC TOE</h1>
       <div>
-          <p className="my-5 text-4xl text-center text-white ">Turn:</p>
+          <p className="my-2 text-4xl text-center text-white md:my-5 ">Turn:</p>
           <div className="flex items-center justify-center gap-4 text-5xl">
-              <div className={turn==="X" ? "flex w-[80px] h-[80px] bg-red-500 shadow-lg text-white border rounded-2xl items-center justify-center" : "flex w-[80px] h-[80px] bg-transparent  text-white  rounded-2xl items-center justify-center" }>
-                  <p>X</p>
+              <div className={turn==="X" ? "flex w-[60px] md:w-[80px] md:h-[80px] h-[60px]  bg-red-500 shadow-lg text-white border rounded-2xl items-center justify-center" : "flex w-[60px] md:w-[80px] md:h-[80px] h-[60px]  bg-transparent shadow-lg text-white  rounded-2xl items-center justify-center" }>
+                  <p className="mt-2">X</p>
               </div>
-              <div className={turn==="O" ? "flex w-[80px] h-[80px] bg-blue-500 shadow-lg text-white border rounded-2xl items-center justify-center" : "flex w-[80px] h-[80px] bg-transparent  text-white  rounded-2xl items-center justify-center" }>
-                  <p>O</p>
+              <div className={turn==="O" ? "flex w-[60px] md:w-[80px] md:h-[80px] h-[60px]  bg-blue-500 shadow-lg text-white border rounded-2xl items-center justify-center" : "flex w-[60px] md:w-[80px] md:h-[80px] h-[60px]  bg-transparent shadow-lg text-white  rounded-2xl items-center justify-center" }>
+                  <p className="mt-2">O</p>
               </div>
         </div>
         
       </div>
-          <section className="grid  w-[300px] h-[300px] justify-items-center grid-rows-3 my-10 gap-8 grid-cols-3">
+          <section className="grid w-[240px] h-[240px]  md:w-[300px] md:h-[300px] justify-items-center grid-rows-3 my-6 md:my-10 gap-8 grid-cols-3 mx-2">
               {board.map((cells,index)=>(
-              <div key={Math.random()} className="w-[100px] h-[100px] text-7xl flex justify-center rounded-xl items-center border shadow-md hover:cursor-pointer " onClick={()=>handleClick(index)}>
-                  <p className={cells== "O" ? " font-bold text-blue-500" : " text-red-500 font-bold" }>
+              <div key={Math.random()} className=" md:w-[100px] md:h-[100px] w-[80px] h-[80px] text-7xl text-center flex justify-center rounded-xl items-center border shadow-md hover:cursor-pointer " onClick={()=>handleClick(index)}>
+                  <p className={cells== "O" ? " font-bold  text-blue-500 mt-3" : " text-red-500 mt-3 font-bold" }>
                     {cells}
                   </p>
               </div>
@@ -92,7 +92,7 @@ export default function Home() {
               }
               
           </section>               
-          <button onClick={handleExit} className="p-4 my-6 text-xl text-white bg-green-400 rounded-full">RESET</button>
+          <button onClick={handleExit} className="p-4 my-4 text-xl text-white bg-green-400 rounded-full">RESET</button>
         </div> 
         {hasWinner === true &&
             <div className='fixed top-0 left-0 flex items-start justify-center w-screen h-screen bg-black bg-opacity-30'>      
