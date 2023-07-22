@@ -83,7 +83,7 @@ export default function Home() {
       </div>
           <section className="grid  w-[300px] h-[300px] justify-items-center grid-rows-3 my-10 gap-8 grid-cols-3">
               {board.map((cells,index)=>(
-              <div className="w-[100px] h-[100px] text-7xl flex justify-center rounded-xl items-center border shadow-md hover:cursor-pointer " onClick={()=>handleClick(index)}>
+              <div key={Math.random()} className="w-[100px] h-[100px] text-7xl flex justify-center rounded-xl items-center border shadow-md hover:cursor-pointer " onClick={()=>handleClick(index)}>
                   <p className={cells== "O" ? " font-bold text-blue-500" : " text-red-500 font-bold" }>
                     {cells}
                   </p>
