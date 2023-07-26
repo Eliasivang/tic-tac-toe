@@ -96,7 +96,7 @@ export default function Home() {
         </div> 
         {hasWinner === true &&
             <div className='fixed top-0 left-0 flex items-start justify-center w-screen h-screen bg-black bg-opacity-30'>      
-                <div className='w-[400px] h-[400px] gap-5 flex mt-36 flex-col rounded-2xl mx-2 justify-center items-center relative z-20 bg-white shadow-xl'>
+                <div className='w-[400px] h-[400px] gap-5 flex mt-28 flex-col rounded-2xl mx-2 justify-center items-center relative z-20 bg-white shadow-xl'>
                     <p className='text-6xl text-center '>{turn} Won!</p>
                     <p className='my-10 text-7xl'>🏆</p>
                     <button onClick={()=>setHasWinner(false)}  className='p-4 text-xl text-white bg-green-400 rounded-full '>Back to the Game</button>
@@ -106,7 +106,7 @@ export default function Home() {
         }
         {hasBoth  &&
             <div className='fixed top-0 left-0 flex items-start justify-center w-screen h-screen bg-black bg-opacity-30'>      
-                <div className='w-[400px] h-[400px] gap-5 flex mt-36 flex-col mx-2 rounded-2xl justify-center items-center relative z-20 bg-white shadow-xl'>
+                <div className='w-[400px] h-[400px] gap-5 flex mt-28 flex-col mx-2 rounded-2xl justify-center items-center relative z-20 bg-white shadow-xl'>
                     <p className='text-6xl text-center'>BOTH!</p>
                     <p className='my-8 text-7xl'>🏆🏆</p>
                     <button onClick={()=>setHasBoth(false)}  className='p-4 text-xl text-white bg-green-400 rounded-full '>Back to the game</button>
